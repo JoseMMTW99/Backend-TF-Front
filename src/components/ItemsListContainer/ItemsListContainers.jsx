@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
 
-export const ItemListConteiner = () => {
+export const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
 
     const getProducts = async () => {
@@ -21,6 +21,9 @@ export const ItemListConteiner = () => {
     }, []);
 
     return (
-        <ItemList products={products}/>
+        <div>
+            <h1 className="fw-bold text-center p-5">Ecommerce</h1>
+            <ItemList products={products}/>
+        </div>
     );
 };

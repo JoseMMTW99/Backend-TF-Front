@@ -1,16 +1,17 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { ItemListConteiner } from './components/ItemsListConteiner/ItemsListConteiners';
+import { ItemListContainer } from './components/ItemsListContainer/ItemsListContainers';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
+import { ItemListContainerMocks } from './components/ItemsListContainer/ItemsListContainersMocks';
 
 function App() {
   return (
     <Router>
-      <h1 className="fw-bold text-center p-5">Ecommerce</h1>
       <Routes>
-        <Route path='/' element={<ItemListConteiner/>}/>
+        <Route path='/' element={<ItemListContainer/>}/>
         <Route path='/detail/:pid' element={<ItemDetailContainer/>}/>
+        <Route path='/mocks' element={<ItemListContainerMocks/>}/>
       </Routes>
     </Router>
   );
